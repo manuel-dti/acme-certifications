@@ -24,6 +24,14 @@
 <display:table pagesize="5" class="displaytag" keepStatus="true"
 	name="departments" requestURI="${requestURI}" id="row">
 	
+	<security:authorize access="hasRole('ADMIN')">
+		<display:column>
+			<a href="department/administrator/edit.do?departmentId=${row.id}">
+				<spring:message	code="department.edit" />
+			</a>
+		</display:column>		
+	</security:authorize>
+	
 	<spring:message code="department.name" var="nameHeader" />
 	<display:column property="name" title="${nameHeader}" sortable="true" />
 
@@ -36,8 +44,7 @@
 
 <security:authorize access="hasRole('ADMIN')">
 	<div>
-		<a href="department/administrator/create.do"> <spring:message
-				code="department.create" />
+		<a href="department/administrator/create.do"> <spring:message code="department.create" />
 		</a>
 	</div>
 </security:authorize>

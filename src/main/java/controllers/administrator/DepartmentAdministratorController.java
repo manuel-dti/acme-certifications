@@ -7,9 +7,11 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.Assert;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import controllers.AbstractController;
@@ -49,14 +51,24 @@ public class DepartmentAdministratorController extends AbstractController {
 
 	// Create -----------------------------------------------------------------
 
-	// Creation ---------------------------------------------------------------
-
 	@RequestMapping(value = "/create", method = RequestMethod.GET)
 	public ModelAndView create() {
 		ModelAndView result;
 		Department department;
 
 		department = this.departmentService.create();
+		result = this.createEditModelAndView(department);
+
+		return result;
+	}
+
+	@RequestMapping(value = "/edit", method = RequestMethod.GET)
+	public ModelAndView edit(@RequestParam final int departmentId) {
+		ModelAndView result;
+		Department department;
+
+		department = this.departmentService.findOne(departmentId);
+		Assert.notNull(department);
 		result = this.createEditModelAndView(department);
 
 		return result;

@@ -533,6 +533,71 @@
 		<property name="maximumMark" value="1" />
 		<property name="answer" value="Answer 8" />
 		<property name="exam" ref="exam4" />						
-	</bean>				
+	</bean>	
+	
+	<!-- Departments -->
+	
+	<bean id="department1" class="domain.Department">
+		<property name="name" value="Department 1" />
+		<property name="building" value="building 1" />						
+	</bean>
+	
+	<bean id="department2" class="domain.Department">
+		<property name="name" value="Department 2" />
+		<property name="building" value="building 2" />						
+	</bean>
+	
+	<bean id="department3" class="domain.Department">
+		<property name="name" value="Department 3" />
+		<property name="building" value="building 3" />						
+	</bean>
+	
+	<!-- Employee -->
+	
+	<bean id="employee1" class="domain.Employee">
+		<property name="name" value="Employee 1" />
+		<property name="department" ref="department1"/>						
+	</bean>
+		
+	<bean id="employee2" class="domain.Employee">
+		<property name="name" value="Employee 2" />
+		<property name="department" ref="department1"/>						
+	</bean>
+	
+	<bean id="employee3" class="domain.Employee">
+		<property name="name" value="Employee 3" />
+		<property name="department" ref="department1"/>						
+	</bean>	
+	
+	<bean id="employee4" class="domain.Employee">
+		<property name="name" value="Employee 4" />
+		<property name="department" ref="department2"/>						
+	</bean>
+	
+	<bean id="employee5" class="domain.Employee">
+		<property name="name" value="Employee 5" />				
+	</bean>	
+	
+	<!-- Address -->
+	
+	<bean id="address1" class="domain.Address">
+		<property name="completeAddress" value="Address 1" />				
+	</bean>	
+	
+	<bean id="address2" class="domain.Address">
+		<property name="completeAddress" value="Address 2" />				
+	</bean>
+	
+	<bean id="address3" class="domain.Address">
+		<property name="completeAddress" value="Address 3" />				
+	</bean>
+	
+	<bean id="address4" class="domain.Address">
+		<property name="completeAddress" value="Address 4" />				
+	</bean>
+	
+	<bean id="address5" class="domain.Address">
+		<property name="completeAddress" value="Address 5" />				
+	</bean>
 	
 </beans>
