@@ -32,6 +32,7 @@
 					<li><a href="actor/administrator/list.do"><spring:message code="master.page.administrator.actors" /></a></li>
 					<li><a href="announcement/administrator/list.do"><spring:message code="master.page.administrator.announcements" /></a></li>
 					<li><a href="certification/administrator/list.do"><spring:message code="master.page.administrator.certifications" /></a></li>
+					<li><a href="department/administrator/list.do"><spring:message code="master.page.administrator.departments" /></a></li>
 				</ul>
 			</li>
 		</security:authorize>		

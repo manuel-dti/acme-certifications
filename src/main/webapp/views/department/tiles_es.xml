@@ -2,8 +2,9 @@
 
 <!-- 
  * tiles_es.xml
- *
+
  * Copyright (C) 2017 Universidad de Sevilla
+ * Author (A) 2012 Rafael Corchuelo (corchu@us.es)
  * 
  * The use of this project is hereby constrained to the conditions of the 
  * TDG Licence, a copy of which you may download from 
@@ -13,17 +14,13 @@
 <!DOCTYPE tiles-definitions PUBLIC
        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
-      
+       
 <tiles-definitions>
 
-	<definition name="welcome/index" extends="master.page">	
-		<put-attribute name="title" value="¡Bienvenidos!" />
-		<put-attribute name="body" value="/views/welcome/index.jsp" />
+	<definition name="department" extends="master.page">	
+		<put-attribute name="title" value="Lista de Departamentos" />
+		<put-attribute name="body" value="/views/department/list.jsp" />
 	</definition>
 	
-		<definition name="welcome/departments" extends="master.page">	
-		<put-attribute name="title" value="Departments" />
-		<put-attribute name="body" value="/views/welcome/department.jsp" />
-	</definition>
-	
+
 </tiles-definitions>

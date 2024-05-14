@@ -43,6 +43,8 @@
 		<security:intercept-url pattern="/announcement/customer/**" access="hasRole('CUSTOMER')" />
 		<security:intercept-url pattern="/announcement/reviewer/**" access="hasRole('REVIEWER')" />
 		
+		<security:intercept-url pattern="/department/administrator/**" access="hasRole('ADMIN')" />
+		
 		<security:intercept-url pattern="/certification/administrator/**" access="hasRole('ADMIN')" />
 		<security:intercept-url pattern="/certification/customer/**" access="hasRole('CUSTOMER')" />
 		

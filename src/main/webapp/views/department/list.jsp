@@ -1,5 +1,5 @@
 <%--
- * footer.jsp
+ * list.jsp
  *
  * Copyright (C) 2017 Universidad de Sevilla
  * 
@@ -19,8 +19,16 @@
 <%@taglib prefix="security"	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<jsp:useBean id="date" class="java.util.Date" />
+<!-- Listing grid -->
 
-<hr />
+<display:table pagesize="5" class="displaytag" keepStatus="true"
+	name="announcements" requestURI="${requestURI}" id="row">
+	
+	<spring:message code="department.name" var="nameHeader" />
+	<display:column property="Name" title="${nameHeader}" sortable="true" />
 
-<b>Copyright &copy; <fmt:formatDate value="${date}" pattern="yyyy" var="formattedDate"/> ACME, Inc. ${formattedDate}</b>
+	<spring:message code="department.building" var="buildingHeader" />
+	<display:column property="Building" title="${buildingHeader}" sortable="false" />
+	
+</display:table>
+
