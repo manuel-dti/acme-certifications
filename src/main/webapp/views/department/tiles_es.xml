@@ -22,5 +22,10 @@
 		<put-attribute name="body" value="/views/department/list.jsp" />
 	</definition>
 	
+	<definition name="department/edit" extends="master.page">	
+		<put-attribute name="title" value="Edición Departamentos" />
+		<put-attribute name="body" value="/views/department/edit.jsp" />
+	</definition>
+	
 
 </tiles-definitions>

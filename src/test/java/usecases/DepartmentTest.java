@@ -31,6 +31,9 @@ public class DepartmentTest extends AbstractTest {
 	private EmployeeService		_employeeService;
 
 
+	@Autowired
+	//	private DepartmentAdministratorController _departmentController;
+
 	// Tests -----------------------------------------------------------
 
 	private Employee createEmployee() {
@@ -209,5 +212,10 @@ public class DepartmentTest extends AbstractTest {
 
 		Assert.isTrue(res.getEmployees().contains(e) == false);
 	}
+
+	//	@Test
+	//	public void createDepartmentAdministratorController() {
+	//		this._departmentController.
+	//	}
 
 }

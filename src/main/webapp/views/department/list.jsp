@@ -22,13 +22,23 @@
 <!-- Listing grid -->
 
 <display:table pagesize="5" class="displaytag" keepStatus="true"
-	name="announcements" requestURI="${requestURI}" id="row">
+	name="departments" requestURI="${requestURI}" id="row">
 	
 	<spring:message code="department.name" var="nameHeader" />
-	<display:column property="Name" title="${nameHeader}" sortable="true" />
+	<display:column property="name" title="${nameHeader}" sortable="true" />
 
 	<spring:message code="department.building" var="buildingHeader" />
-	<display:column property="Building" title="${buildingHeader}" sortable="false" />
+	<display:column property="building" title="${buildingHeader}" sortable="false" />
 	
 </display:table>
+
+<!-- Action links -->
+
+<security:authorize access="hasRole('ADMIN')">
+	<div>
+		<a href="department/administrator/create.do"> <spring:message
+				code="department.create" />
+		</a>
+	</div>
+</security:authorize>
 
